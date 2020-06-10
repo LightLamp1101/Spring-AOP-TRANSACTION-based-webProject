@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>회원 등록</title>
-	<link rel="stylesheet" href="../resources/member.css" type="text/css"></link>
+	<link rel="stylesheet" href="../resources/bootstrap.min.css" type="text/css"></link>
 </head>
 <body>
 	<div align=center>
