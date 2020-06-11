@@ -29,9 +29,10 @@
 			</tr>
 			
 		</table>
+		<br>
 		<dl>
-			<dd><input type="submit" name="submit" value="보내기"></dd>
-			<dd><input type="reset" name="reset" value="다시 작성"></dd>
+			<dd><input type="submit" class = "btn btn-success" name="submit" value="저장"></dd>
+			<dd><input type="reset" class = "btn btn-success" name="reset" value="초기화"></dd>
 		</dl>
 		</form>
 	</div>

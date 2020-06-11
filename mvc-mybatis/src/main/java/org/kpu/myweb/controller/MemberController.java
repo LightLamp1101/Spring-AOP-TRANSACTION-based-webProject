@@ -74,6 +74,15 @@ public class MemberController {
 		logger.info(" /modify? URL POST method called. then modifyMemberPost method executed.");
         return "redirect:/member/list";
     }
+    
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    public String deleteMember(@RequestParam("id") String id, Model model) throws Exception {
+    	memberService.deleteMember(id);
+    	
+		logger.info(" /delete? URL called. then readMemebr method executed.");
+        return "redirect:/member/list";
+    }
+    
 /*  MemberControllerAdvice에 예외처리 기능적용    
     @ExceptionHandler(DataNotFoundException.class)
     public String handleException(DataNotFoundException e) {

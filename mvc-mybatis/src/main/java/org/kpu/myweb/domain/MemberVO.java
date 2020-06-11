@@ -10,6 +10,7 @@ public class MemberVO {
 	private String mem_mobile;
 	private String mem_email;
 	private String mem_role;
+	private String mem_team;
 
 	
 	
@@ -111,6 +112,18 @@ public class MemberVO {
 				+ mem_mobile + ", mem_email=" + mem_email + ", mem_role=" + mem_role + "]";
 //		return "MemberVO [mem_userid=" + mem_userid + ", mem_passwd=" + mem_passwd + ", mem_username=" + mem_username + ", mem_engname=" + mem_engname + ", mem_mobile="
 //		+ mem_mobile + ", mem_email=" + mem_email + ", mem_role=" + mem_role + "]";
+	}
+
+
+
+	public String getMem_team() {
+		return mem_team;
+	}
+
+
+
+	public void setMem_team(String mem_team) {
+		this.mem_team = mem_team;
 	}
 
 

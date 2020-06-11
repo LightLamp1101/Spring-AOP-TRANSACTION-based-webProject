@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Student List</title>
+	<title>Member List</title>
 	<link rel="stylesheet" href="../resources/bootstrap.min.css" type="text/css"></link>
 	<!-- 
 	<style type="text/css">
@@ -21,11 +21,11 @@
 </head>
 <body>
 	<div align=center>
-		<header>회원 목록</header><br>
-		<c:url value="/member/register" var="url"/><a href="${url}">회원 등록</a><br><br>
+		<header><br><h1>회원 목록</h1></header><br>
+		
 		<table style="text-align:center; margin:auto;">
 		  <tr class="table-primary">
-		    <th>NUM</th><th>ID</th><th>PWD</th><th>USERNAME</th><th>ENGNAME</th><th>MOBILE</th><th>EMAIL</th><th>ROLE</th><th></th>
+		    <th>Num</th><th>ID</th><th>Password</th><th>UserName</th><th>EngName</th><th>Mobile</th><th>Email</th><th>Team</th><th>Role</th><th>View INFO</th><th>Modify INFO</th><th>Delete INFO</th>
 		  </tr>
 		  <c:forEach var="member" items="${members}" >
 			  <tr class="table-secondary">
@@ -36,14 +36,30 @@
 			    <td><c:out value="${member.mem_engname}"/></td>
 			    <td><c:out value="${member.mem_mobile}"/></td>
 			    <td><c:out value="${member.mem_email}"/></td>
+			    <td><c:out value="${member.mem_team}"/></td>
 			    <td><c:out value="${member.mem_role}"/></td>
 			    <td>
-			      <c:url value="/member/read?id=${member.mem_id}" var="url"/><a href="${url}">정보 보기</a>
-			      <c:url value="/member/modify?id=${member.mem_id}" var="url"/><a href="${url}">정보 수정</a>
+			      <c:url value="/member/read?id=${member.mem_id}" var="url"/>
+			      <button type="button" class="btn btn-outline-info" onclick="location.href='${url}'">정보 보기</button>
+			     </td>
+			     <td>
+			      <c:url value="/member/modify?id=${member.mem_id}" var="url"/>
+			      <button type="button" class="btn btn-outline-warning" onclick="location.href='${url}'">정보 수정</button>
+			    </td>
+			    <td>
+			      <c:url value="/member/delete?id=${member.mem_id}" var="url"/>
+			      <button type="button" class="btn btn-outline-danger" onclick="location.href='${url}'">정보 삭제</button>
 			    </td>
 			  </tr>
 		  </c:forEach>
 		</table>
+		
+		<br>
+		<c:url value="/member/register" var="url"/>
+		<button type="button" class = "btn btn-success" onclick="location.href='${url}'">회원 추가 등록</button>
+		<br>
+		<!-- <a href="${url}">회원  추가등록</a><br><br> -->
+		
 	</div>
 </body>
 </html>

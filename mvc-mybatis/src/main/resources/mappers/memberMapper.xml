@@ -11,8 +11,8 @@
  	</select>
  	
      <insert id="insert"> 
-   		insert into tk_aiw_member (mem_userid, mem_passwd, mem_username, mem_engname, mem_mobile, mem_email, mem_role) values
- 		(#{mem_userid}, #{mem_passwd}, #{mem_username}, #{mem_engname}, #{mem_mobile}, #{mem_email}, #{mem_role})
+   		insert into tk_aiw_member (mem_userid, mem_passwd, mem_username, mem_engname, mem_mobile, mem_email, mem_team, mem_role) values
+ 		(#{mem_userid}, #{mem_passwd}, #{mem_username}, #{mem_engname}, #{mem_mobile}, #{mem_email}, #{mem_team}, #{mem_role})
      </insert> 
  	
      <select id="selectByid" resultType="MemberVO">
@@ -27,7 +27,7 @@
  	
      <update id="update">
 	 	update tk_aiw_member set mem_userid =#{mem_userid}, mem_passwd =#{mem_passwd}, mem_username =#{mem_username}, 
-			mem_engname =#{mem_engname}, mem_mobile =#{mem_mobile}, mem_email =#{mem_email}, mem_role =#{mem_role} 
+			mem_engname =#{mem_engname}, mem_mobile =#{mem_mobile}, mem_email =#{mem_email}, mem_team=#{mem_team}, mem_role =#{mem_role} 
 		 where mem_id = #{mem_id}
     </update>
  
