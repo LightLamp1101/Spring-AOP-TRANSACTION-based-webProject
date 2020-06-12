@@ -28,7 +28,7 @@
 		
 		<table style="text-align:center; margin:auto;">
 		  <tr class="table-primary">
-		    <th>Num</th><th>ID</th><th>Password</th><th>UserName</th><th>EngName</th><th>Mobile</th><th>Email</th><th>Team</th><th>Role</th><th>View INFO</th><th>Modify INFO</th><th>Delete INFO</th>
+		    <th>Num</th><th>ID</th><th>Password</th><th>UserName</th><th>Mobile</th><th>Team</th><th>Role</th><th>View INFO</th><th>Modify INFO</th><th>Delete INFO</th>
 		  </tr>
 		  <c:forEach var="member" items="${members}" >
 			  <tr class="table-secondary">
@@ -36,9 +36,7 @@
 			    <td><c:out value="${member.mem_userid}"/></td>
 			    <td><c:out value="${member.mem_passwd}"/></td>
 			    <td><c:out value="${member.mem_username}"/></td>
-			    <td><c:out value="${member.mem_engname}"/></td>
 			    <td><c:out value="${member.mem_mobile}"/></td>
-			    <td><c:out value="${member.mem_email}"/></td>
 			    <td><c:out value="${member.mem_team}"/></td>
 			    <td><c:out value="${member.mem_role}"/></td>
 			    <td>
@@ -70,9 +68,12 @@
 		<tr class="table-primary">
 		    <th>회원 종류</th><th>회원 수</th>
 		  </tr>
-		<tr><th class="table-primary">선수</th><td>0명</td></tr>
-		<tr><th class="table-primary">스탭</th><td>0명</td></tr>
-		<tr><th class="table-primary">관리자</th><td>0명</td></tr>
+		  <c:forEach var="count" items="${counts}" >
+			  <tr class="table-secondary">
+			    <td><c:out value="${count.role}"/></td>
+			    <td><c:out value="${count.count}"/> 명</td>
+			  </tr>
+		  </c:forEach>
 		</table>
 	</div>
 </body>

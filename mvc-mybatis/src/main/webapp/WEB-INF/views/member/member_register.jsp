@@ -18,6 +18,7 @@
 			<tr><th class="table-primary">EnglishName</th><td><input type="text" name="mem_engname" placeholder="공백없이 입력하세요"></td></tr>
 			<tr><th class="table-primary">MobileNumber</th><td><input type="text" name="mem_mobile" placeholder="***-****-****"></td></tr>
 			<tr><th class="table-primary">EmailAddress</th><td><input type="text" name="mem_email" placeholder="****@****.***"></td></tr>
+			<tr><th class="table-primary">Team</th><td><input type="text" name="mem_team" placeholder="공백없이 입력하세요"></td></tr>
 			<tr><th class="table-primary">YourRole</th>
 				<td>
 				<select name="mem_role">

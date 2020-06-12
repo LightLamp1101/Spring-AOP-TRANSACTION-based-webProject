@@ -2,7 +2,9 @@ package org.kpu.myweb.controller;
 
 import java.util.List;
 
+import org.kpu.myweb.domain.CountVO;
 import org.kpu.myweb.domain.MemberVO;
+import org.kpu.myweb.service.CountService;
 import org.kpu.myweb.service.MemberService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,14 +25,19 @@ public class MemberController {
 	@Autowired
     private MemberService memberService;
 
+	@Autowired
+    private CountService countService;
+	
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 	
 	@RequestMapping(value = {"/list"}, method = RequestMethod.GET)
     public String listMember(Model model) throws Exception {
     	List<MemberVO> members = memberService.readMemberList();
+    	List<CountVO> counts = countService.readCountList();
     	
 		logger.info(" /member/list URL called. then listMemebr method executed.");
         model.addAttribute("members", members);
+        model.addAttribute("counts", counts);
         return "member/member_list";
     }
     

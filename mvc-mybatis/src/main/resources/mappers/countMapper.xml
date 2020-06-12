@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.kpu.myweb.mapper.CountMapper">
+  
+ 	<select id="getTime" resultType="string">
+ 		select now()
+ 	</select>
+ 	
+ 	 <select id="selectByid" resultType="CountVO">
+ 		select * from tk_member_count where role = #{role}
+     </select>
+ 	
+     <select id="selectAll" resultType="org.kpu.myweb.domain.CountVO">
+     <![CDATA[
+ 		select * from tk_member_count
+      ]]> 
+     </select>
+ 	
+     <update id="updatePlus">
+	 	update tk_member_count set count = count+1 where role = #{role}
+    </update>
+    
+    <update id="updateMinus">
+	 	update tk_member_count set count = count-1 where role = #{role}
+    </update>
+	
+</mapper>  

@@ -20,6 +20,7 @@
 			<tr><th class="table-primary">EnglishName</th><td class="table-secondary"><input type="text" name="mem_engname" value="${member.mem_engname}"></td></tr>
 			<tr><th class="table-primary">MobileNumber</th><td class="table-secondary" ><input type="text" name="mem_mobile" value="${member.mem_mobile}"></td></tr>
 			<tr><th class="table-primary">EmailAddress</th><td class="table-secondary"><input type="text" name="mem_email" value="${member.mem_email}"></td></tr>
+			<tr><th class="table-primary">Team</th><td class="table-secondary"><input type="text" name="mem_team" value="${member.mem_team}"></td></tr>
 			<tr><th class="table-primary">YourRole</th>
 				<td class="table-secondary">
 				<select name="mem_role"  style="width:100%">
