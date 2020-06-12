@@ -9,16 +9,16 @@
 </head>
 <body>
 	<div align=center>
-		<header>회원 정보 등록</header>
+		<header><br><h3>회원 정보 등록</h3></header><br>
 		<form name=form1 action="http://localhost:8080/myweb/member/register/" method="post">
-		<table>	
-			<tr><th>LoginID</th><td><input type="text" name="mem_userid" autofocus placeholder="공백없이 입력하세요"></td></tr>
-			<tr><th>LoginPWD</th><td><input type="text" name="mem_passwd" placeholder="공백없이 입력하세요"></td></tr>
-			<tr><th>YourName</th><td><input type="text" name="mem_username"  placeholder="공백없이 입력하세요"></td></tr>
-			<tr><th>EnglishName</th><td><input type="text" name="mem_engname" placeholder="공백없이 입력하세요"></td></tr>
-			<tr><th>MobileNumber</th><td><input type="text" name="mem_mobile" placeholder="***-****-****"></td></tr>
-			<tr><th>EmailAddress</th><td><input type="text" name="mem_email" placeholder="****@****.***"></td></tr>
-			<tr><th>YourRole</th>
+		<table class="table-secondary" >	
+			<tr><th class="table-primary">LoginID</th><td><input type="text" name="mem_userid" autofocus placeholder="공백없이 입력하세요"></td></tr>
+			<tr><th class="table-primary">LoginPWD</th><td><input type="text" name="mem_passwd" placeholder="공백없이 입력하세요"></td></tr>
+			<tr><th class="table-primary">YourName</th><td><input type="text" name="mem_username"  placeholder="공백없이 입력하세요"></td></tr>
+			<tr><th class="table-primary">EnglishName</th><td><input type="text" name="mem_engname" placeholder="공백없이 입력하세요"></td></tr>
+			<tr><th class="table-primary">MobileNumber</th><td><input type="text" name="mem_mobile" placeholder="***-****-****"></td></tr>
+			<tr><th class="table-primary">EmailAddress</th><td><input type="text" name="mem_email" placeholder="****@****.***"></td></tr>
+			<tr><th class="table-primary">YourRole</th>
 				<td>
 				<select name="mem_role">
 				    <option value="player" selected="selected">선수</option>

@@ -20,8 +20,11 @@
 	
 </head>
 <body>
-	<div align=center>
-		<header><br><h1>회원 목록</h1></header><br>
+
+	
+	<div align=center style="float:left; margin-right:50px;">
+		
+		<header><br><br><h3>회원 목록</h3></header><br>
 		
 		<table style="text-align:center; margin:auto;">
 		  <tr class="table-primary">
@@ -60,6 +63,17 @@
 		<br>
 		<!-- <a href="${url}">회원  추가등록</a><br><br> -->
 		
+	</div>
+	<div align=center style="float:left">
+	<header><br><br><h3>회원 현황</h3></header><br><br>
+		<table style="text-align:center; margin:auto;">
+		<tr class="table-primary">
+		    <th>회원 종류</th><th>회원 수</th>
+		  </tr>
+		<tr><th class="table-primary">선수</th><td>0명</td></tr>
+		<tr><th class="table-primary">스탭</th><td>0명</td></tr>
+		<tr><th class="table-primary">관리자</th><td>0명</td></tr>
+		</table>
 	</div>
 </body>
 </html>

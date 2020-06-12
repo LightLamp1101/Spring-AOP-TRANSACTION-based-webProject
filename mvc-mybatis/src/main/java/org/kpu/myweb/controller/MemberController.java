@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
-@RequestMapping(value="/member")
+/* @RequestMapping(value="/member") */
+@RequestMapping(value="/member") 
 public class MemberController {
 	
 	@Autowired
